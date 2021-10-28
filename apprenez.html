@@ -1,0 +1,86 @@
+<!doctype HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Pèse la panthère</title>
+  <link rel="icon" type="image/jpg" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="css/apprenez.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <a href="https://jalmih08.github.io/biographie">
+    <h1 class="nom">Pèse la panthère</h1>
+  </a>
+  <nav>
+    <ul class="nav-ul">
+      <li><a href="jeux.html">Jouez maintenant</a></li>
+    </ul>
+  </nav>
+
+<section class="debut">
+
+  <div class="container">
+
+    <div class="box box1">
+      <img class="jeu" src="images/jeu.png" alt="Jeu">
+    </div>
+
+    <div class="box box2">
+      <h1>Notre jeu</h1>
+      <p>jbhgowrnbgiowrnweipfnqepw</p>
+    </div>
+
+    <div class="box box3">
+      <p class="text">Pantheres: <span id="conteur"></span></p>
+      <img id="btn" src="images/patriotes.png" onclick="clicked()" width="250px" />
+    </div>
+
+  </div>
+
+  </section>
+
+  <section class="ets-section">
+<h1>TITRE</h1>
+<table>
+<tr>
+  <th>Entrees</th>
+  <th>Sorties</th>
+  <th>Traitement</th>
+</tr>
+<tr>
+  <td>12</td>
+  <td>2</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td>3</td>
+  <td>4</td>
+</tr>
+</table>
+  </section>
+
+  <section class="gestion">
+<h1>GESTION</h1>
+  </section>
+
+  <section class="croquis">
+<h1>CROQUIS</h1>
+  </section>
+
+  <script>
+    let clickConteur = 0;
+    let point = 1
+    document.getElementById("pointParClick").innerHTML = "Points par click: " + point;
+    function clicked() {
+      clickConteur += point;
+      document.getElementById("conteur").innerHTML = clickConteur;
+    }
+  </script>
+</body>
+
+</html>

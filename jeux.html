@@ -1,0 +1,126 @@
+<!doctype HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Pèse la panthère</title>
+	<link href="css/jeux.css" rel="stylesheet"type="text/css"/>
+  <script src="scripts/script.js" defer></script>
+  <link rel="icon" type="image/jpg" href="images/favicon.png">
+</head>
+
+<body>
+	<div class="centered">
+	<h1 class="text">Clicker Game</h1>
+	<p class="text">Pantheres: <span id="conteur"></span><br></p>
+  <div id="pic">
+	<img class="pan" id="btn" src="images/patriotes.png" onclick="clicked()"  width="200px"/>
+	</div> 
+
+
+<!--  Cette div est la div qu'on utilise pour placer les bouttons ou on veut sur la page  -->
+	<div class="bouttonsMulti">
+		<h3 class="text">Ameliorations</h3>
+    <button class="btn-jeux" id="plusUn" onclick="multiChange1()">+1: cout: 10 pantheres</button><br><br>
+    <button class="btn-jeux" id="plusDeux" onclick="multiChange2()">+2: cout: 50 pantheres </button><br><br>
+		<button class="btn-jeux" id="plusTrois" onclick="multiChange3()">+3: cout: 100 pantheres</button><br><br>
+    <button class="btn-jeux" id="plusQuatre" onclick="multiChange4()">+4: cout: 150 pantheres</button><br><br>
+    <button class="btn-jeux" id="plusCinq" onclick="multiChange5()">+5: cout: 200 pantheres</button><br><br>
+    <button class="btn-jeux" id="plusDix" onclick="multiChange10()">+10: cout: 500 pantheres</button><br><br>
+	</div>
+  <!-- On utilise cette div pour le placement de la statistique "points par click en-haut a gauche" -->
+	<div class="text"id="pointParClick"></div>
+
+  
+
+<!-- On utilise cette div pour la page avec les questions qui viennent lorsqu'on appuis les bouttons d'amelioration-->
+  <div class="pageQuestion" id="pageQuestion">
+
+    <!-- Ces divs sont pour la division des differentes questions -->
+    <div class="txtQuestion" id="txtQuestion1">
+      <h2>Comment ajoutons nous du javascript a une page HTML</h2>
+        <label><input type="radio" name="qst1"/>Avec la balise script</label>
+        <label><input type="radio" name="qst1"/>Avec la balise style</label>
+        <label><input type="radio" name="qst1"/>Avec 'function()'</label>
+        <label><input type="radio" name="qst1"/>Avec un tableau</label><br><br>
+        <button class="btn-jeux" onclick="qstConfirm1()"> Confirmer la reponse </button>      
+    </div>
+
+    <div class="txtQuestion" id="txtQuestion2">
+      <h2>Comment pouvons-nous selectionner une classe en CSS</h2>
+        <label><input type="radio" name="qst2"/>Avec le selecteur "*" </label>
+        <label><input type="radio" name="qst2"/>Avec le selecteur "#" </label>
+        <label><input type="radio" name="qst2"/>Avec le selecteur "." </label>
+        <label><input type="radio" name="qst2"/>Avec PYTHON </label><br><br>
+       <button class="btn-jeux" onclick="qstConfirm2()"> Confirmer la reponse </button>
+    </div>
+
+    <div class="txtQuestion" id="txtQuestion3">
+      <h2> Comment est-ce qu'on introduit une fonction en javascript </h2>
+        <label><input type="radio" name="qst3"/>Avec "function()" </label>
+        <label><input type="radio" name="qst3"/>Avec "var" </label>
+        <label><input type="radio" name="qst3"/>Avec " onclick='' " </label>
+        <label><input type="radio" name="qst3"/>Avec CSS </label><br><br>
+				<button class="btn-jeux" onclick="qstConfirm3()"> Confirmer la reponse </button>        
+    </div>
+    <div class="txtQuestion" id="txtQuestion4">
+      <h2> Comment insert-on un titre dans une page HTML </h2> <br><br>
+        <label><input type="radio" name="qst4"/>Avec la balise p</label>
+        <label><input type="radio" name="qst4"/>Avec la balise h1</label>
+        <label><input type="radio" name="qst4"/>Avec la balise body</label>
+        <label><input type="radio" name="qst4"/>Avec la balise html</label><br><br>
+				<button class="btn-jeux" onclick="qstConfirm4()"> Confirmer la reponse </button>
+    </div>
+    <div class="txtQuestion" id="txtQuestion5">
+      <h2> Comment est-ce qu'on change la couleur de texte avec CSS </h2> <br><br>
+        <label><input type="radio" name="qst5"/>Avec 'background-color'</label>
+        <label><input type="radio" name="qst5"/>Avec 'font-style'</label>
+        <label><input type="radio" name="qst5"/>Avec 'font-family'</label>
+        <label><input type="radio" name="qst5"/>Avec 'color'</label><br><br>
+				<button class="btn-jeux" onclick="qstConfirm5()"> Confirmer la reponse </button>      
+    </div>
+    <div class="txtQuestion" id="txtQuestion10">
+      <h2> Comment introduit-on un tableau en JavaScript </h2> <br><br>
+        <label><input type="radio" name="qst6"/>Avec " let 'variable' = {'contenu'} "</label>
+        <label><input type="radio" name="qst6"/>Avec " Math.random() "</label>
+        <label><input type="radio" name="qst6"/>Avec " let 'variable' = ['contenu'] "</label>
+        <label><input type="radio" name="qst6"/>Avec " tableau {'contenu'} "</label><br><br>
+				<button class="btn-jeux" onclick="qstConfirm10()"> Confirmer la reponse </button>       
+    </div>
+  </div>
+
+  <!-- Div pour la page avec le message qui dit soit: "bonne reponse" ou "mauvaise reponse" -->
+	<div class="pageReponse" id="pageReponse">
+    <div class="txtReponse" id="txtReponse1"></div>
+    <div class="txtReponse" id="txtReponse2"></div>
+    <div class="txtReponse" id="txtReponse3"></div>
+		<div class="txtReponse" id="txtReponse4"></div>
+    <div class="txtReponse" id="txtReponse5"></div>
+    <div class="txtReponse" id="txtReponse10"></div>
+		<button class="btn-jeux" id="btnRetour" onclick="document.getElementById('pageReponse').style.display='none' ">Retourner au jeu</button>
+	</div>
+	</div>
+
+<div id="minuterie">
+<button class="btn-debut" id="tempConteur"onclick="commenceTemp()" > Debute </button>
+</div>
+
+<span id="high"></span><br>
+
+<div id="record">
+<span class="high1" id="high2"></span><br>
+<a class="score-btn" onclick="afficheScore()">SCORE</a>
+</div>
+
+
+<div id="score">
+  <div id="txtScores">
+  </div>
+  <a id="retour-btn" onclick="retourJeux()">X</a>
+</div>
+
+
+
+
+</body>
+</html>
