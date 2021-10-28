@@ -1,0 +1,136 @@
+/* CSS POUR INDEX */
+
+body {
+  height: 100vh;
+  width: 100vh;
+  background: white;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  color: black;
+    background: #F6CEFC;
+  font-family: 'Open Sans', sans-serif; /* La police de caractère */
+}
+
+/* CSS pour la navigation commence ici*/
+  nav {
+    background: #343a40;
+    background: url("noirbg.png");
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 105vw;
+    height: 71px;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    right: 0;
+  }
+
+  .nom {
+    position: absolute;
+    left: 10px;
+    top: -20px;
+    color: white;
+    font-size: 1.8rem;
+    position: fixed;
+    z-index: 6;
+  }
+
+  .nav-ul {
+    position: absolute;
+    right: 0;
+    font-size: 19px;
+  }
+
+  .nav-ul li {
+    list-style: none;
+    display: inline-block;
+    border: 1px solid #5e35b1;
+    background: url('purple.png') center center !important;
+    padding: 21.5px;
+    margin-top: -1px;
+    transition: 0.35s;
+  }
+
+  .nav-ul li a {
+    text-decoration: none;
+    color: white;
+  }
+
+
+.nom {
+  font-size: 2.5rem;
+}
+
+
+p {
+  text-align: center;
+  font-size: 1.18rem;
+}
+
+.main {
+  position: absolute;
+  right: 160px;
+  width: 800px;
+  margin-top: -100px;
+  transform: rotate(-20deg);
+  z-index: 0;
+  opacity: 0.7;
+}
+
+.container {
+    display: flex;
+    margin-top: 100px;
+    position: absolute;
+    width: 100vw;
+    height: 50vh;
+}
+
+.pat {
+  width: 400px;
+}
+
+span {
+  color: purple;
+}
+
+.titre {
+  font-size: 38px;
+}
+
+
+.box {
+    flex: 1;
+    margin-top: 70px;
+}
+
+.box1 {
+  margin-left: 50px;
+  margin-top: 30px;
+  line-height: 40px;
+  text-align: center;
+    height: 500px;
+}
+
+.box2 {
+    margin-left: 250px;
+    transform: rotate(20deg);
+}
+
+.btn-index {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  background: #E34EFD;
+  border-radius: 30px;
+  padding: 8px 16px;
+  margin: 5px;
+  transition: 0.35s;
+}
+
+.btn-index:hover {
+  background: purple;
+}
+
