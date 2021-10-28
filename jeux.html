@@ -11,7 +11,7 @@
 
 <body>
 	<div class="centered">
-	<h1 class="text">Clicker Game</h1>
+	<h1 class="text1">Pese la Panthere</h1>
 	<p class="text">Pantheres: <span id="conteur"></span><br></p>
   <div id="pic">
 	<img class="pan" id="btn" src="images/patriotes.png" onclick="clicked()"  width="200px"/>
@@ -29,7 +29,7 @@
     <button class="btn-jeux" id="plusDix" onclick="multiChange10()">+10: cout: 500 pantheres</button><br><br>
 	</div>
   <!-- On utilise cette div pour le placement de la statistique "points par click en-haut a gauche" -->
-	<div class="text"id="pointParClick"></div>
+	<div class="text3"id="pointParClick"></div>
 
   
 
@@ -102,7 +102,7 @@
 	</div>
 
 <div id="minuterie">
-<button class="btn-debut" id="tempConteur"onclick="commenceTemp()" > Debute </button>
+<button class="btn-debut" id="tempConteur"onclick="commenceTemp()" > Début </button>
 </div>
 
 <span id="high"></span><br>
@@ -114,9 +114,10 @@
 
 
 <div id="score">
-  <div id="txtScores">
+   <h3 class="prec" >Scores Précédants:</h3>
+  <div id="txtScores"> 
   </div>
-  <a id="retour-btn" onclick="retourJeux()">X</a>
+  <a id="retour-btn" onclick="retourJeux()"><img class="x" src="images/x.jpg" alt=""></a>
 </div>
 
 
