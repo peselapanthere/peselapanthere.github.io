@@ -154,6 +154,10 @@ background: linear-gradient(90deg, transparent, white, transparent);
   opacity: 0.4;
 }
 
+.btn-opacity-un {
+  opacity: 1;
+}
+
 img {
 cursor: url(dot.png), auto;
 -webkit-user-drag: none;
@@ -226,7 +230,7 @@ user-drag: none;
 }
 .x:hover{
   transform: scale(1.1);
-  cursor: grabbing;
+  cursor: pointer;
 }
 #txtScores{
   margin-left: 15px;
@@ -254,8 +258,9 @@ user-drag: none;
 }
 .termineCss{
   position: fixed;
-  top:30%;
-  right:39%;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
   font-size: 25px;
 }
@@ -266,3 +271,4 @@ user-drag: none;
   text-align:center;
  margin-top:25%;
 }
+
