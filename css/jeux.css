@@ -90,7 +90,7 @@ img::selection
 
 .btn-debut {
   position: absolute;
-  top: 49%; 
+  top: 75%; 
   left: 50%;
   transform: translateX(-50%);
   padding: 30px 48px;
@@ -172,7 +172,7 @@ user-drag: none;
 
 #high {
   margin-left: 15px;
-  font-size: 16px;
+  font-size: 13px;
   color: white;
   text-shadow: 2px 2px 10px black;
   text-decoration: underline;
@@ -241,4 +241,28 @@ user-drag: none;
   color: white;
   text-shadow: 2px 2px 10px black;
   text-decoration: underline;
+}
+
+.pageTermine {
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+.termineCss{
+  position: fixed;
+  top:30%;
+  right:39%;
+  text-align: center;
+  font-size: 25px;
+}
+.explique{
+  font-size: 16px;
+  color: white;
+  text-shadow: 2px 2px 10px black;
+  text-align:center;
+ margin-top:25%;
 }
