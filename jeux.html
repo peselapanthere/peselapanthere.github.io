@@ -149,21 +149,25 @@
 <div class="pageTermine" id="pageTermine">
   <div class="termineCss">
   <div id="txtTermine"></div>
-  <button class="btn-jeux" onclick="btnTermine()">Confirmez</button>
-  </div>
+  <button class="btn-jeux" onclick="btnTermine()">Recommencer</button>
+ </div>
 </div>
 
 
 <div id="minuterie">
-  <div class="explique"><p>Pese la panthere! Vous devez pesez la panthere aussi vite que vous pouvez pour atteindre 1000<br> pantheres! Attention, vous allez etre demander des questions pour continuer, si tu repond mal, tu <br>recommence a 0. Achete des ameliorations pour gagnez plus de points par click. Bon succes! </p></div>
-<button class="btn-debut" id="tempConteur"onclick="commenceTemp()" > Début </button>
+  <p class="explique" id="explique">Default: Facile</p>
+<button class="btn-debut" id="tempConteur"onclick="commenceTemp()" > Jouer </button>
+
+<button class="btn-jeux" id="facile" onclick="chgFacile()">Facile</button><br>
+<button class="btn-jeux" id="moyen" onclick="chgMoyen()">Moyen</button><br>
+<button class="btn-jeux" id="difficile" onclick="chgDifficile()">Difficile</button>
 </div>
 
 <span id="high"></span><br>
 
 <div id="record">
-<span class="high1" id="high2"></span><br>
-<a class="score-btn" onclick="afficheScore()">SCORE</a>
+<!-- <span class="high1" id="high2"></span><br> -->
+<a class="score-btn" onclick="afficheScore()">TABLE DE TEMPS</a>
 </div>
 
 
