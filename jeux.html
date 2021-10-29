@@ -26,7 +26,7 @@
 		<button class="btn-jeux" id="plusTrois" onclick="multiChange3()">+3: cout: 100 pantheres</button><br><br>
     <button class="btn-jeux" id="plusQuatre" onclick="multiChange4()">+4: cout: 150 pantheres</button><br><br>
     <button class="btn-jeux" id="plusCinq" onclick="multiChange5()">+5: cout: 200 pantheres</button><br><br>
-    <button class="btn-jeux" id="plusDix" onclick="multiChange10()">+10: cout: 500 pantheres</button><br><br>
+    <button class="btn-jeux" id="plusCinquante" onclick="multiChange50()">+50: cout: 500 pantheres</button><br><br>
 	</div>
   <!-- On utilise cette div pour le placement de la statistique "points par click en-haut a gauche" -->
 	<div class="text3"id="pointParClick"></div>
@@ -79,13 +79,48 @@
         <label><input type="radio" name="qst5"/>Avec 'color'</label><br><br>
 				<button class="btn-jeux" onclick="qstConfirm5()"> Confirmer la reponse </button>      
     </div>
-    <div class="txtQuestion" id="txtQuestion10">
+    <div class="txtQuestion" id="txtQuestion50">
       <h2> Comment introduit-on un tableau en JavaScript </h2> <br><br>
         <label><input type="radio" name="qst6"/>Avec " let 'variable' = {'contenu'} "</label>
         <label><input type="radio" name="qst6"/>Avec " Math.random() "</label>
         <label><input type="radio" name="qst6"/>Avec " let 'variable' = ['contenu'] "</label>
         <label><input type="radio" name="qst6"/>Avec " tableau {'contenu'} "</label><br><br>
-				<button class="btn-jeux" onclick="qstConfirm10()"> Confirmer la reponse </button>       
+				<button class="btn-jeux" onclick="qstConfirm50()"> Confirmer la reponse </button>       
+    </div>
+  </div>
+
+  <div class="pageQuestion" id="pageRecommence">
+    <div class="txtQuestion" id="txtRecommence1">
+    <h2> Comment nous déplaçons nous à travers les espaces de stockage sur un 'raspberry pi' ? </h2>
+      <label><input type="radio" name="recommence1"/>Avec 'sudo'</label>
+      <label><input type="radio" name="recommence1"/>Avec la commande 'rm pictures'</label>
+      <label><input type="radio" name="recommence1"/>Avec la commande 'dc'</label>
+      <label><input type="radio" name="recommence1"/>Avec la commande 'cd'</label><br><br>
+      <button class="btn-jeux" onclick="cnfrmRecommence1()"> Confirmer la reponse </button>
+    </div>
+    <div class="txtQuestion" id="txtRecommence2">
+    <h2> Comment connectons-nous une souris USB à un ordinateur </h2>
+      <label><input type="radio" name="recommence2"/>Avec un cable HDMI</label>
+      <label><input type="radio" name="recommence2"/>Avec un cable Display Port</label>
+      <label><input type="radio" name="recommence2"/>Avec un fil USB</label>
+      <label><input type="radio" name="recommence2"/>Avec un cable VGA</label><br><br>
+      <button class="btn-jeux" onclick="cnfrmRecommence2()"> Confirmer la reponse </button>      
+    </div>
+    <div class="txtQuestion" id="txtRecommence3">
+      <h2> Quel composant d'un ordinateur est comme le cerveau de l'ordinateur? </h2>
+      <label><input type="radio" name="recommence3"/>L'écran</label>
+      <label><input type="radio" name="recommence3"/>Le processeur</label>
+      <label><input type="radio" name="recommence3"/>La carte graphique</label>
+      <label><input type="radio" name="recommence3"/>Le clavier</label><br><br>
+      <button class="btn-jeux" onclick="cnfrmRecommence3()"> Confirmer la reponse </button>    
+    </div>
+    <div class="txtQuestion" id="txtRecommence4">
+      <h2> Lequel entre ceux-ci n'est pas un système d'exploitation </h2>
+      <label><input type="radio" name="recommence4"/>Apple</label>
+      <label><input type="radio" name="recommence4"/>Windows</label>
+      <label><input type="radio" name="recommence4"/>MacOS</label>
+      <label><input type="radio" name="recommence4"/>Android</label><br><br>
+      <button class="btn-jeux" onclick="cnfrmRecommence4()"> Confirmer la reponse </button>
     </div>
   </div>
 
@@ -96,12 +131,31 @@
     <div class="txtReponse" id="txtReponse3"></div>
 		<div class="txtReponse" id="txtReponse4"></div>
     <div class="txtReponse" id="txtReponse5"></div>
-    <div class="txtReponse" id="txtReponse10"></div>
+    <div class="txtReponse" id="txtReponse50"></div>
 		<button class="btn-jeux" id="btnRetour" onclick="document.getElementById('pageReponse').style.display='none' ">Retourner au jeu</button>
 	</div>
+
+  <div class="pageReponse" id="recommenceReponse">
+    <div class="txtReponse" id="recommenceReponse1"></div>
+    <div class="txtReponse" id="recommenceReponse2"></div>
+    <div class="txtReponse" id="recommenceReponse3"></div>
+    <div class="txtReponse" id="recommenceReponse4"></div>
+		<button class="btn-jeux" id="btnRetour" onclick="document.getElementById('recommenceReponse').style.display='none' ">Retourner au jeu</button>
+  </div>
+
+
 	</div>
 
+<div class="pageTermine" id="pageTermine">
+  <div class="termineCss">
+  <div id="txtTermine"></div>
+  <button class="btn-jeux" onclick="btnTermine()">Confirmez</button>
+  </div>
+</div>
+
+
 <div id="minuterie">
+  <div class="explique"><p>Pese la panthere! Vous devez pesez la panthere aussi vite que vous pouvez pour atteindre 1000<br> pantheres! Attention, vous allez etre demander des questions pour continuer, si tu repond mal, tu <br>recommence a 0. Achete des ameliorations pour gagnez plus de points par click. Bon succes! </p></div>
 <button class="btn-debut" id="tempConteur"onclick="commenceTemp()" > Début </button>
 </div>
 
