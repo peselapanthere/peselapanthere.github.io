@@ -3,6 +3,26 @@ var afficheQuesDeux = 1;
 var afficheQuesTrois = 1;
 var afficheQuesQuatre = 1;
 
+var defi = "";
+var difficulte = 5;
+
+function chgFacile() {
+difficulte = 800;
+defi = "Facile";
+document.getElementById("explique").innerHTML = defi;
+}
+function chgMoyen() {
+  difficulte = 1000;
+defi = "Moyen";
+document.getElementById("explique").innerHTML = defi;
+}
+
+function chgDifficile() {
+difficulte = 1500;
+defi = "Diffcile";
+document.getElementById("explique").innerHTML = defi;
+}
+
 //On commence avec 0 points
 let clickConteur = 0;
 
@@ -34,9 +54,9 @@ function clicked() {
   document.getElementById("conteur").innerHTML = clickConteur;
 
   //les coordonnees aleatoires pour le deplacement de l'image
-  var x = Math.floor(Math.random() * 375);
-  var y = Math.floor(Math.random() * 375);
-  var y2 = Math.floor(Math.random() * 375);
+  var x = Math.floor(Math.random() * 300);
+  var y = Math.floor(Math.random() * 300);
+  var y2 = Math.floor(Math.random() * 300);
   logo.style.position = "relative";
   logo.style.top = x + "px"
   logo.style.left = y - y2 + "px";
@@ -54,11 +74,16 @@ function clicked() {
     recommence4();
   }
 
+
+
+
   //pour que le jeux se termine lorsque l'utilisateur appuis les pantheres besoins
-  if (clickConteur >= 1000) {
+  if (clickConteur >= difficulte) {
     clickConteur = 0;
+    document.getElementById("conteur").innerHTML = clickConteur
     document.getElementById("pageTermine").style.display = "block";
-    point = 1
+    point = 1;
+    termineTemp();
     document.getElementById("pointParClick").innerHTML = "Points par click: " + point;
     document.getElementById("plusUn").disabled = false;
     document.getElementById("plusDeux").disabled = false;
@@ -66,7 +91,6 @@ function clicked() {
     document.getElementById("plusQuatre").disabled = false;
     document.getElementById("plusCinq").disabled = false;
     document.getElementById("plusDix").disabled = false;
-    termineTemp();
     document.getElementById("conteur").innerHTML = clickConteur;
     document.getElementById("minuterie").style.display = "none";
   }
@@ -465,7 +489,6 @@ function qstConfirm50() {
   }
 }
 
-
 // code pour le temps
 var tempDebut;
 var tempFin;
@@ -476,7 +499,6 @@ function commenceTemp() {
   tempDebut = performance.now();
   document.getElementById("minuterie").style.display = "none";
   document.getElementById("record").style.display = "none";
-
 }
 
 function termineTemp() {
@@ -487,12 +509,16 @@ function termineTemp() {
 
   // get seconds 
   var sec = parseInt(Math.round(diffTemp));
-  document.getElementById("txtTermine").innerHTML = "Bravo! vous avez terminé en " + sec + " secondes";
-  score = score + sec + " secondes<br>"
+  minutes = sec / 60
+  minutes = parseInt(Math.floor(minutes));
+  var secExact = sec % 60
+
+  document.getElementById("txtTermine").innerHTML = "Bravo! vous avez terminé en " + minutes +" Minute(s)"+ " et "+ secExact + " secondes";
+  score = score + minutes +" Minute(s)"+ " et "+ secExact + " secondes"
   if (sec <= highScore) {
-    highScore = sec;
-    document.getElementById("high").innerHTML = "Record: " + highScore + "s";
-    document.getElementById("high2").innerHTML = "Record: " + highScore + "s";
+    highScore = minutes +" Minute(s)"+ " et "+ secExact + " secondes";
+    document.getElementById("high").innerHTML = "Record: " + highScore ;
+    document.getElementById("high2").innerHTML = "Record: " + highScore ;
 
   }
   document.getElementById("record").style.display = "block";
@@ -501,6 +527,19 @@ function termineTemp() {
 function btnTermine() {
   document.getElementById("pageTermine").style.display = "none";  
   document.getElementById("minuterie").style.display = "block" ;
+  let btnReset1 = document.getElementById("plusUn")
+  btnReset1.classList.add("btn-opacity-un");
+  let btnReset2 = document.getElementById("plusDeux")
+  btnReset2.classList.add("btn-opacity-un");
+  let btnReset3 = document.getElementById("plusTrois")
+  btnReset3.classList.add("btn-opacity-un");
+  let btnReset4 = document.getElementById("plusQuatre")
+  btnReset4.classList.add("btn-opacity-un");
+  let btnReset5 = document.getElementById("plusCinq")
+  btnReset5.classList.add("btn-opacity-un");
+  let btnReset50 = document.getElementById("plusCinquante")
+  btnReset50.classList.add("btn-opacity-un");
+
 }
 
 document.getElementById("score").style.display = "none";
@@ -515,5 +554,6 @@ function afficheScore() {
 function retourJeux() {
   document.getElementById("score").style.display = "none";
   document.getElementById("retour-btn").style.display = "none";
+
 }
 
