@@ -75,9 +75,7 @@ img::selection
 }.pan:active{
   width: 210px;
 }
-#high{
-  font-size: 10px;
-}
+
 
 #minuterie{
   position: fixed;
@@ -135,6 +133,7 @@ background: linear-gradient(90deg, transparent, white, transparent);
 
  .btn-jeux, .score-btn {
   position: relative;
+
   text-decoration: none;
   color: white;
   background: #E34EFD;
@@ -170,28 +169,22 @@ user-drag: none;
 #record {
   position: absolute;
   left: 10px;
+  bottom: 5%;
   line-height: 30px;
-  bottom: 25px;
+  
 }
 
 #high {
-  margin-left: 15px;
+  margin-left: 12px;
   font-size: 13px;
   color: white;
   text-shadow: 2px 2px 10px black;
   text-decoration: underline;
   position: absolute;
   left: 10px;
-  bottom: 25px;
+  bottom: 10px;
 }
-.high1 {
-  margin-left: 15px;
-  font-size: 16px;
-  color: white;
-  text-shadow: 2px 2px 10px black;
-  text-decoration: underline;
-  
-}
+
 
 #score{
   position: fixed;
@@ -204,8 +197,6 @@ user-drag: none;
   height: 50vh;
 }
 
-
-
 #txtScores {
   color: black;
 }
@@ -214,8 +205,7 @@ user-drag: none;
   position: absolute;
   top: 0;
   right: 0;
-  width: 25px;
-  margin-right: 10px;
+  margin-right: 1px;
   margin-top:5px;
   padding: 5px 10px;
   font-size: 30px;
@@ -223,6 +213,40 @@ user-drag: none;
   color: black;
   z-index: 5;
 }
+
+.difficulte-btns {
+  position: absolute;
+  margin: auto;
+  left: 50%;
+  top: 60%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.btn-facile-active {
+  order: 1;
+  background: purple;
+}
+/* FIX SO THAT WHEN YOU CLICK AND ITS ACTIVE THE COLOR CHANGES */
+.btn-moyen {
+  order: 2;
+}
+
+.btn-difficile {
+  order: 3;
+}
+
+.btn-moyen:hover~.btn-facile-active {
+  background: #E34EFD;
+}
+.btn-difficile:hover~.btn-facile-active {
+  background: #E34EFD;
+}
+
+a:hover {
+  background: purple;
+}
+
 
 .x {
   height: 35px;
@@ -232,6 +256,18 @@ user-drag: none;
   transform: scale(1.1);
   cursor: pointer;
 }
+.y {
+  position:absolute;
+  left:-20px;
+  top:5px;
+  height: 60px;
+  transition: transform .2s;
+}
+.y:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
 #txtScores{
   margin-left: 15px;
   margin-top: 15px;
@@ -265,10 +301,41 @@ user-drag: none;
   font-size: 25px;
 }
 .explique{
-  font-size: 16px;
+  font-size: 20px;
   color: white;
   text-shadow: 2px 2px 10px black;
   text-align:center;
- margin-top:25%;
+  margin-top:25%;
 }
 
+.txtRegles {
+  position: absolute;
+  top:1px;
+  left:1px;
+  background-color: #9966CC;
+  border-radius: 5px;
+}
+.explique-jeux{
+  font-size: 16px;
+  color: white;
+  text-shadow: 2px 2px 10px black;
+  margin-top: 10px;
+  margin-left:10px;
+  margin-right: 10px;
+}
+.ex{
+  color: white;
+  text-shadow: 2px 2px 10px black;
+  margin-top: 10px;
+  margin-left:10px;
+  margin-right: 10px;
+}
+.x2 {
+  margin-left:90%;
+  height: 35px;
+  transition: transform .2s;
+}
+.x2:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
