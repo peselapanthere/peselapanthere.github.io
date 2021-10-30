@@ -11,11 +11,13 @@
 
 <body>
 	<div class="centered">
-	<h1 class="text1">Pese la Panthere</h1>
+	<h1 id="mainTitle" class="text1">Pese la Panthere</h1>
 	<p class="text">Pantheres: <span id="conteur"></span><br></p>
   <div id="pic">
 	<img class="pan" id="btn" src="images/patriotes.png" onclick="clicked()"  width="200px"/>
 	</div> 
+
+  
 
 
 <!--  Cette div est la div qu'on utilise pour placer les bouttons ou on veut sur la page  -->
@@ -155,27 +157,38 @@
 
 
 <div id="minuterie">
-  <p class="explique" id="explique">Default: Facile</p>
-<button class="btn-debut" id="tempConteur"onclick="commenceTemp()" > Jouer </button>
-
-<button class="btn-jeux" id="facile" onclick="chgFacile()">Facile</button><br>
-<button class="btn-jeux" id="moyen" onclick="chgMoyen()">Moyen</button><br>
-<button class="btn-jeux" id="difficile" onclick="chgDifficile()">Difficile</button>
+  <div class="regles" id="regles">
+    <img src="images/help.png" id="afficheBoutton" onclick="regleAffiche2()" class="y">
+  <div class ="txtRegles"id="txtRegles2">
+    <h2 class="ex">Explications:</h2>
+  <p class="explique-jeux">Arrivez au nombre de pantheres demander par difficulté aussi  <br>vite que possible. (Facile:800, Moyen:1000, Difficile:1500).  <br>Pèser sur le boutton «Jouer» commence ton temps. Acheté des <br>améliorations pour augnmenter votre nombre de panthères par <br>clique. Vérifié vos temps précédents en pèsant sur le <br>bouton «TABLE DES DONNÉS».  </p>
+  <img src="images/x.jpg" class="x2" onclick="regleCache2()">
+  </div>
+  </div>
+  <p class="explique" id="explique">Facile: 800</p>
+  <div id="bouttonn">
+  <button class="btn-debut" id="tempConteur" onclick="commenceTemp()" > Jouer </button>
+  </div>
+  <div class="difficulte-btns">
+  <button class="btn-jeux btn-moyen" id="moyen" onclick="chgMoyen()">Moyen</button>
+  <button class="btn-jeux btn-difficile" id="difficile" onclick="chgDifficile()">Difficile</button>
+  <button class="btn-jeux btn-facile btn-facile-active" id="facile" onclick="chgFacile()">Facile</button>
+  </div>
 </div>
 
-<span id="high"></span><br>
+
 
 <div id="record">
-<!-- <span class="high1" id="high2"></span><br> -->
+
 <a class="score-btn" onclick="afficheScore()">TABLE DE TEMPS</a>
 </div>
-
+<span id="high"></span><br>
 
 <div id="score">
    <h3 class="prec" >Scores Précédants:</h3>
   <div id="txtScores"> 
   </div>
-  <a id="retour-btn" onclick="retourJeux()"><img class="x" src="images/x.jpg" alt=""></a>
+  <img class="x" id="retour-btn" onclick="retourJeux()" src="images/x.jpg" alt="">
 </div>
 
 
