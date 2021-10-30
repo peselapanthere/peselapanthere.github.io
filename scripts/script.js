@@ -4,22 +4,22 @@ var afficheQuesTrois = 1;
 var afficheQuesQuatre = 1;
 
 var defi = "";
-var difficulte = 5;
+var difficulte = 800;
 
 function chgFacile() {
 difficulte = 800;
-defi = "Facile";
+defi = "Facile: 800";
 document.getElementById("explique").innerHTML = defi;
 }
 function chgMoyen() {
   difficulte = 1000;
-defi = "Moyen";
+defi = "Moyen: 1000";
 document.getElementById("explique").innerHTML = defi;
 }
 
 function chgDifficile() {
 difficulte = 1500;
-defi = "Diffcile";
+defi = "Diffcile: 1500";
 document.getElementById("explique").innerHTML = defi;
 }
 
@@ -31,6 +31,8 @@ let logo = document.getElementById("pic");
 
 //on commence par gagnant 1 point par click
 let point = 1
+
+
 
 let pageReponse = document.getElementById("pageReponse");
 let pageQuestion = document.getElementById('pageQuestion');
@@ -46,6 +48,21 @@ pageReponse.style.display = "none";
 pageRecommence.style.display = "none";
 recommenceReponse.style.display ="none";
 document.getElementById("pageTermine").style.display = "none";
+document.getElementById("regles").style.display = "block";
+document.getElementById("txtRegles2").style.display = "none";
+
+
+
+
+
+function regleAffiche2() {
+  document.getElementById("txtRegles2").style.display ="block";
+  document.getElementById("afficheBoutton").style.display="none";
+}
+function regleCache2() {
+  document.getElementById("txtRegles2").style.display ="none";
+  document.getElementById("afficheBoutton").style.display="block";
+}
 
 
 //fonction qui s'active avec chaque click de l'image de la panthere
@@ -514,14 +531,14 @@ function termineTemp() {
   var secExact = sec % 60
 
   document.getElementById("txtTermine").innerHTML = "Bravo! vous avez terminé en " + minutes +" Minute(s)"+ " et "+ secExact + " secondes";
-  score = score + minutes +" Minute(s)"+ " et "+ secExact + " secondes"
+  score = score + minutes +" Minute(s)"+ " et "+ secExact + " secondes<br>"
   if (sec <= highScore) {
-    highScore = minutes +" Minute(s)"+ " et "+ secExact + " secondes";
-    document.getElementById("high").innerHTML = "Record: " + highScore ;
-    document.getElementById("high2").innerHTML = "Record: " + highScore ;
+    highScore = sec;
+    textRecord = minutes +" Minute(s)"+ " et "+ secExact + " secondes";
+    document.getElementById("high").innerHTML = "Record: " + textRecord ;
+  
 
   }
-  document.getElementById("record").style.display = "block";
 }
 
 function btnTermine() {
@@ -539,7 +556,7 @@ function btnTermine() {
   btnReset5.classList.add("btn-opacity-un");
   let btnReset50 = document.getElementById("plusCinquante")
   btnReset50.classList.add("btn-opacity-un");
-
+  document.getElementById("record").style.display = "block";
 }
 
 document.getElementById("score").style.display = "none";
@@ -549,11 +566,13 @@ function afficheScore() {
   document.getElementById("score").style.display = "block";
   document.getElementById("txtScores").innerHTML = score
   document.getElementById("retour-btn").style.display = "block";
+  document.getElementById("bouttonn").style.display = "none";
 }
 
 function retourJeux() {
   document.getElementById("score").style.display = "none";
   document.getElementById("retour-btn").style.display = "none";
+  document.getElementById("bouttonn").style.display = "block";
 
 }
 
