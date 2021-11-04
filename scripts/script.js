@@ -677,6 +677,10 @@ function btnTermine() {
   let btnReset50 = document.getElementById("plusCinquante")
   btnReset50.classList.add("btn-opacity-un");
   document.getElementById("record").style.display = "block";
+  afficheQuesUn = 1;
+  afficheQuesDeux = 1;
+  afficheQuesTrois = 1;
+  afficheQuesQuatre = 1;
 }
 
 
