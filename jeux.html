@@ -11,8 +11,8 @@
 
 <body>
 	<div class="centered">
-	<h1 id="mainTitle" class="text1">Pese la Panthere</h1>
-	<p class="text">Pantheres: <span id="conteur"></span><br></p>
+	<h1 id="mainTitle" class="text1">Pese la Panthère</h1>
+	<p class="text">Panthères: <span id="conteur"></span><br></p>
   <div id="pic">
 	<img class="pan" id="btn" src="images/patriotes.png" onclick="clicked()"  width="200px"/>
 	</div> 
@@ -23,12 +23,12 @@
 <!--  Cette div est la div qu'on utilise pour placer les bouttons ou on veut sur la page  -->
 	<div class="bouttonsMulti">
 		<h3 class="text">Ameliorations</h3>
-    <button class="btn-jeux" id="plusUn" onclick="multiChange1()">+1: cout: 10 pantheres</button><br><br>
-    <button class="btn-jeux" id="plusDeux" onclick="multiChange2()">+2: cout: 50 pantheres </button><br><br>
-		<button class="btn-jeux" id="plusTrois" onclick="multiChange3()">+3: cout: 100 pantheres</button><br><br>
-    <button class="btn-jeux" id="plusQuatre" onclick="multiChange4()">+4: cout: 150 pantheres</button><br><br>
-    <button class="btn-jeux" id="plusCinq" onclick="multiChange5()">+5: cout: 200 pantheres</button><br><br>
-    <button class="btn-jeux" id="plusCinquante" onclick="multiChange50()">+50: cout: 500 pantheres</button><br><br>
+    <button class="btn-jeux" id="plusUn" onclick="multiChange1()">+1ppc coût: 10 panthères</button><br><br>
+    <button class="btn-jeux" id="plusDeux" onclick="multiChange2()">+2ppc coût: 50 panthères </button><br><br>
+		<button class="btn-jeux" id="plusTrois" onclick="multiChange3()">+3ppc coût: 100 panthères</button><br><br>
+    <button class="btn-jeux" id="plusQuatre" onclick="multiChange4()">+4ppc coût: 150 panthères</button><br><br>
+    <button class="btn-jeux" id="plusCinq" onclick="multiChange5()">+5ppc coût: 200 panthères</button><br><br>
+    <button class="btn-jeux" id="plusCinquante" onclick="multiChange50()">+50ppc coût: 500 panthères</button><br><br>
 	</div>
   <!-- On utilise cette div pour le placement de la statistique "points par click en-haut a gauche" -->
 	<div class="text3"id="pointParClick"></div>
@@ -41,87 +41,91 @@
     <!-- Ces divs sont pour la division des differentes questions -->
     <div class="txtQuestion" id="txtQuestion1">
       <h2>Comment ajoutons nous du javascript a une page HTML</h2>
-        <label><input type="radio" name="qst1"/>Avec la balise script</label>
-        <label><input type="radio" name="qst1"/>Avec la balise style</label>
-        <label><input type="radio" name="qst1"/>Avec 'function()'</label>
-        <label><input type="radio" name="qst1"/>Avec un tableau</label><br><br>
+        <label><input type="radio" id ="1_1" name="qst1"/>Avec la balise script</label>
+        <label><input type="radio" id ="1_2" name="qst1"/>Avec la balise style</label>
+        <label><input type="radio" id ="1_3" name="qst1"/>Avec 'function()'</label>
+        <label><input type="radio" id ="1_4" name="qst1"/>Avec un tableau</label><br><br>
         <button class="btn-jeux" onclick="qstConfirm1()"> Confirmer la reponse </button>      
     </div>
 
     <div class="txtQuestion" id="txtQuestion2">
       <h2>Comment pouvons-nous selectionner une classe en CSS</h2>
-        <label><input type="radio" name="qst2"/>Avec le selecteur "*" </label>
-        <label><input type="radio" name="qst2"/>Avec le selecteur "#" </label>
-        <label><input type="radio" name="qst2"/>Avec le selecteur "." </label>
-        <label><input type="radio" name="qst2"/>Avec PYTHON </label><br><br>
+        <label><input type="radio" id ="2_1" name="qst2"/>Avec le selecteur "*" </label>
+        <label><input type="radio" id ="2_2" name="qst2"/>Avec le selecteur "#" </label>
+        <label><input type="radio" id ="2_3" name="qst2"/>Avec le selecteur "." </label>
+        <label><input type="radio" id ="2_4" name="qst2"/>Avec PYTHON </label><br><br>
        <button class="btn-jeux" onclick="qstConfirm2()"> Confirmer la reponse </button>
     </div>
 
     <div class="txtQuestion" id="txtQuestion3">
       <h2> Comment est-ce qu'on introduit une fonction en javascript </h2>
-        <label><input type="radio" name="qst3"/>Avec "function()" </label>
-        <label><input type="radio" name="qst3"/>Avec "var" </label>
-        <label><input type="radio" name="qst3"/>Avec " onclick='' " </label>
-        <label><input type="radio" name="qst3"/>Avec CSS </label><br><br>
+        <label><input type="radio" id ="3_1" name="qst3"/>Avec "function x ()" </label>
+        <label><input type="radio" id ="3_2" name="qst3"/>Avec "var" </label>
+        <label><input type="radio" id ="3_3" name="qst3"/>Avec " onclick='' " </label>
+        <label><input type="radio" id ="3_4" name="qst3"/>Avec CSS </label><br><br>
 				<button class="btn-jeux" onclick="qstConfirm3()"> Confirmer la reponse </button>        
     </div>
     <div class="txtQuestion" id="txtQuestion4">
-      <h2> Comment insert-on un titre dans une page HTML </h2> <br><br>
-        <label><input type="radio" name="qst4"/>Avec la balise p</label>
-        <label><input type="radio" name="qst4"/>Avec la balise h1</label>
-        <label><input type="radio" name="qst4"/>Avec la balise body</label>
-        <label><input type="radio" name="qst4"/>Avec la balise html</label><br><br>
+      <h2> Comment insert-on un gros titre dans une page HTML </h2> <br><br>
+        <label><input type="radio" id ="4_1" name="qst4"/>Avec la balise p</label>
+        <label><input type="radio" id ="4_2" name="qst4"/>Avec la balise h1</label>
+        <label><input type="radio" id ="4_3" name="qst4"/>Avec la balise body</label>
+        <label><input type="radio" id ="4_4" name="qst4"/>Avec la balise html</label><br><br>
 				<button class="btn-jeux" onclick="qstConfirm4()"> Confirmer la reponse </button>
     </div>
     <div class="txtQuestion" id="txtQuestion5">
       <h2> Comment est-ce qu'on change la couleur de texte avec CSS </h2> <br><br>
-        <label><input type="radio" name="qst5"/>Avec 'background-color'</label>
-        <label><input type="radio" name="qst5"/>Avec 'font-style'</label>
-        <label><input type="radio" name="qst5"/>Avec 'font-family'</label>
-        <label><input type="radio" name="qst5"/>Avec 'color'</label><br><br>
+        <label><input type="radio" id ="5_1" name="qst5"/>Avec 'background-color'</label>
+        <label><input type="radio" id ="5_2" name="qst5"/>Avec 'font-style'</label>
+        <label><input type="radio" id ="5_3" name="qst5"/>Avec 'font-family'</label>
+        <label><input type="radio" id ="5_4" name="qst5"/>Avec 'color'</label><br><br>
 				<button class="btn-jeux" onclick="qstConfirm5()"> Confirmer la reponse </button>      
     </div>
     <div class="txtQuestion" id="txtQuestion50">
       <h2> Comment introduit-on un tableau en JavaScript </h2> <br><br>
-        <label><input type="radio" name="qst6"/>Avec " let 'variable' = {'contenu'} "</label>
-        <label><input type="radio" name="qst6"/>Avec " Math.random() "</label>
-        <label><input type="radio" name="qst6"/>Avec " let 'variable' = ['contenu'] "</label>
-        <label><input type="radio" name="qst6"/>Avec " tableau {'contenu'} "</label><br><br>
+        <label><input type="radio" id ="6_1" name="qst6"/>Avec " let 'variable' = {'contenu'} "</label>
+        <label><input type="radio" id ="6_2" name="qst6"/>Avec " Math.random() "</label>
+        <label><input type="radio" id ="6_3" name="qst6"/>Avec " let 'variable' = ['contenu'] "</label>
+        <label><input type="radio" id ="6_4" name="qst6"/>Avec " tableau {'contenu'} "</label><br><br>
 				<button class="btn-jeux" onclick="qstConfirm50()"> Confirmer la reponse </button>       
     </div>
   </div>
 
   <div class="pageQuestion" id="pageRecommence">
     <div class="txtQuestion" id="txtRecommence1">
+      <h1>Question pour continuer:</h1><br><br>
     <h2> Comment nous déplaçons nous à travers les espaces de stockage sur un 'raspberry pi' ? </h2>
-      <label><input type="radio" name="recommence1"/>Avec 'sudo'</label>
-      <label><input type="radio" name="recommence1"/>Avec la commande 'rm pictures'</label>
-      <label><input type="radio" name="recommence1"/>Avec la commande 'dc'</label>
-      <label><input type="radio" name="recommence1"/>Avec la commande 'cd'</label><br><br>
+      <label><input type="radio" id="7_1" name="recommence1"/>Avec 'sudo'</label>
+      <label><input type="radio" id="7_2" name="recommence1"/>Avec la commande 'rm pictures'</label>
+      <label><input type="radio" id="7_3" name="recommence1"/>Avec la commande 'dc'</label>
+      <label><input type="radio" id="7_4" name="recommence1"/>Avec la commande 'cd'</label><br><br>
       <button class="btn-jeux" onclick="cnfrmRecommence1()"> Confirmer la reponse </button>
     </div>
     <div class="txtQuestion" id="txtRecommence2">
+      <h1>Question pour continuer:</h1><br><br>
     <h2> Comment connectons-nous une souris USB à un ordinateur </h2>
-      <label><input type="radio" name="recommence2"/>Avec un cable HDMI</label>
-      <label><input type="radio" name="recommence2"/>Avec un cable Display Port</label>
-      <label><input type="radio" name="recommence2"/>Avec un fil USB</label>
-      <label><input type="radio" name="recommence2"/>Avec un cable VGA</label><br><br>
+      <label><input type="radio" id="8_1" name="recommence2"/>Avec un cable HDMI</label>
+      <label><input type="radio" id="8_2" name="recommence2"/>Avec un cable Display Port</label>
+      <label><input type="radio" id="8_3" name="recommence2"/>Avec un fil USB</label>
+      <label><input type="radio" id="8_4" name="recommence2"/>Avec un cable VGA</label><br><br>
       <button class="btn-jeux" onclick="cnfrmRecommence2()"> Confirmer la reponse </button>      
     </div>
     <div class="txtQuestion" id="txtRecommence3">
+      <h1>Question pour continuer:</h1><br><br>
       <h2> Quel composant d'un ordinateur est comme le cerveau de l'ordinateur? </h2>
-      <label><input type="radio" name="recommence3"/>L'écran</label>
-      <label><input type="radio" name="recommence3"/>Le processeur</label>
-      <label><input type="radio" name="recommence3"/>La carte graphique</label>
-      <label><input type="radio" name="recommence3"/>Le clavier</label><br><br>
+      <label><input type="radio" id="9_1" name="recommence3"/>L'écran</label>
+      <label><input type="radio" id="9_2" name="recommence3"/>Le processeur</label>
+      <label><input type="radio" id="9_3" name="recommence3"/>La carte graphique</label>
+      <label><input type="radio" id="9_4" name="recommence3"/>Le clavier</label><br><br>
       <button class="btn-jeux" onclick="cnfrmRecommence3()"> Confirmer la reponse </button>    
     </div>
     <div class="txtQuestion" id="txtRecommence4">
+      <h1>Question pour continuer:</h1><br><br>
       <h2> Lequel entre ceux-ci n'est pas un système d'exploitation </h2>
-      <label><input type="radio" name="recommence4"/>Apple</label>
-      <label><input type="radio" name="recommence4"/>Windows</label>
-      <label><input type="radio" name="recommence4"/>MacOS</label>
-      <label><input type="radio" name="recommence4"/>Android</label><br><br>
+      <label><input type="radio" id="10_1" name="recommence4"/>Apple</label>
+      <label><input type="radio" id="10_2"  name="recommence4"/>Windows</label>
+      <label><input type="radio" id="10_3"  name="recommence4"/>MacOS</label>
+      <label><input type="radio" id="10_4" name="recommence4"/>Android</label><br><br>
       <button class="btn-jeux" onclick="cnfrmRecommence4()"> Confirmer la reponse </button>
     </div>
   </div>
@@ -161,18 +165,18 @@
     <img src="images/help.png" id="afficheBoutton" onclick="regleAffiche2()" class="y">
   <div class ="txtRegles"id="txtRegles2">
     <h2 class="ex">Explications:</h2>
-  <p class="explique-jeux">Arrivez au nombre de pantheres demander par difficulté aussi  <br>vite que possible. (Facile:800, Moyen:1000, Difficile:1500).  <br>Pèser sur le boutton «Jouer» commence ton temps. Acheté des <br>améliorations pour augnmenter votre nombre de panthères par <br>clique. Vérifié vos temps précédents en pèsant sur le <br>bouton «TABLE DES DONNÉS».  </p>
+  <p class="explique-jeux">Le but: Arrivez au nombre de panthères demandé par difficulté le plus  <br>vite que possible. (Facile: 800, Moyen: 1 000, Difficile: 1 500). <br> <br>Pèsez sur le bouton «Jouer»  pour commencer votre temps. <br>Ensuite pèse la panthère pour gagner des panthères.<br>Utiliser ceux-ci pour achetez des améliorations pour augmenter le nombre<br> de panthères gagnés par clique. Finalement, vous pouvez vérifiez <br>vos temps précédents en pèsant sur le bouton «TABLE DE TEMPS».  </p>
   <img src="images/x.jpg" class="x2" onclick="regleCache2()">
   </div>
   </div>
-  <p class="explique" id="explique">Facile: 800</p>
+  <p class="explique" id="explique">Facile (But: 800pts)</p>
   <div id="bouttonn">
   <button class="btn-debut" id="tempConteur" onclick="commenceTemp()" > Jouer </button>
   </div>
   <div class="difficulte-btns">
-  <button class="btn-jeux btn-moyen" id="moyen" onclick="chgMoyen()">Moyen</button>
-  <button class="btn-jeux btn-difficile" id="difficile" onclick="chgDifficile()">Difficile</button>
-  <button class="btn-jeux btn-facile btn-facile-active" id="facile" onclick="chgFacile()">Facile</button>
+  <button class="btn-jeux btn-moyen btn-selecte" id="moyen" onclick="chgMoyen()">Moyen</button>
+  <button class="btn-jeux btn-difficile btn-selecte" id="difficile" onclick="chgDifficile()">Difficile</button>
+  <button class="btn-jeux btn-facile btn-facile-active btn-selecte" id="facile" onclick="chgFacile()">Facile</button>
   </div>
 </div>
 
