@@ -1,0 +1,186 @@
+<!doctype HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Pèse la Panthère</title>
+  <link rel="icon" type="image/jpg" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet">
+</head>
+
+<style>
+body {
+  margin: auto;
+  width: 98%;
+  text-align: center;
+  overflow-y: visible;
+  height: 660vh;
+}
+
+p {
+  text-align: left;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+}
+
+a {
+
+}
+</style>
+
+<body>
+<h1>Pseudo-code</h1>
+
+<p>affiche (bouttons de difficulté) <br><br>
+si (facile) { <br>
+  limite de point = 800<br>
+}<br>
+si (moyen) {<br>
+  limite de point = 1000<br>
+}<br>
+si (difficile) {<br>
+  limite de point = 1500<br>
+}<br><br><br>
+
+si (click sur le boutton 'table de temps') {<br>
+  affiche (tout les temps precedents)<br>
+  si (click sur le x) {<br>
+    cache la section de temps<br>
+  }<br>
+}<br><br>
+
+si (click sur le boutton d'aide) {<br>
+  affiche (les règles de jeu)<br>
+  si (click sur le x) {<br>
+    cache la section d'aide<br>
+  }<br>
+}<br><br>
+
+si (click sur le boutton 'debut') {<br>
+  commence le chronometre<br>
+  cache les bouttons de difficulté et la section d'acceuil<br>
+}<br><br><br>
+
+
+//commencement du jeu<br>
+
+points = 0<br>
+points par click = 1<br>
+si (10 points ou plus) {<br>
+  Si (cliqué sur l"amelioration +1 par click) {<br>
+      affiche (question 1)<br>
+      si (bonne reponse) {<br>
+        points par click = points par click + 1<br>
+      } sinon {<br>
+        points par click ne change pas<br>
+      }<br>
+  } <br>
+}<br><br><br>
+si (50 points ou plus) {<br>
+  Si (cliqué sur l"amelioration +2 par click) {<br>
+      affiche (question 2)<br>
+      si (bonne reponse) {<br>
+        points par click = points par click + 2<br>
+      } sinon {<br>
+        points par click ne change pas<br>
+      }<br>
+  } <br>
+}<br><br><br>
+
+si (points = 75) {<br>
+  affiche (question obligatoire 1)<br>
+1  si (bonne reponse) {<br>
+    le joueur continue le jeu normalement<br>
+  } sinon {<br>
+    le joueur perd tout ses points<br>
+  }<br>
+}<br><br><br>
+
+si (100 points ou plus) {<br>
+  Si (cliqué sur l"amelioration +3 par click) {<br>
+      affiche (question 3)<br>
+      si (bonne reponse) {<br>
+        points par click = points par click + 3<br>
+      } sinon {<br>
+        points par click ne change pas<br>
+      }<br>
+  } <br>
+}<br><br><br>
+si (150 points ou plus) {<br>
+  Si (cliqué sur l"amelioration +4 par click) {<br>
+      affiche (question 4)<br>
+      si (bonne reponse) {<br>
+        points par click = points par click + 4<br>
+      } sinon {<br>
+        points par click ne change pas<br>
+      }<br>
+  } <br>
+}<br><br><br>
+si (200 points ou plus) {<br>
+  Si (cliqué sur l"amelioration +5 par click) {<br>
+      affiche (question 5)<br>
+      si (bonne reponse) {<br>
+        points par click = points par click + 5<br>
+      } sinon {<br>
+        points par click ne change pas<br>
+      }<br>
+  } <br>
+}<br><br><br>
+
+si (points = 250) {<br>
+  affiche la deuxieme question obligatoire<br>
+  si (bonne reponse) {<br>
+    le joueur continue le jeu normalement<br>
+  } sinon {<br>
+    le joueur perd tout ses points<br>
+  }<br>
+}<br><br><br>
+
+si (points = 450) {<br>
+  affiche (question obligatoire 3)<br>
+  si (bonne reponse) {<br>
+    le joueur continue le jeu normalement<br>
+  } sinon {<br>
+    le joueur perd tout ses points<br>
+  }<br>
+}<br><br><br>
+
+si (500 points ou plus) {<br>
+  Si (cliqué sur l"amelioration +50 par click) {<br>
+      affiche (question 6)<br>
+      si (bonne reponse) {<br>
+        points par click = points par click + 50<br>
+      } sinon {<br>
+        points par click ne change pas<br>
+      }<br>
+  } <br>
+}<br><br><br>
+
+si (points = 900) {<br>
+  affiche (question obligatoire 4)<br>
+  si (bonne reponse) {<br>
+    le joueur continue le jeu normalement<br>
+  } sinon {<br>
+    le joueur perd tout ses points<br>
+  }<br>
+}<br><br><br>
+
+
+si (joueur atteint la limite) { <br>
+  arrete le chronometre <br>
+  met le temps récent dans la table de temps  <br>
+  reinitialise les points par click, les points, et les questions <br>
+}</p>
+
+<a class="btn-index" href="apprenez.html">Retour</a>
+</body>
+
+</html>
+
+
