@@ -12,16 +12,23 @@
 </head>
 
 <body>
-  <a href="https://jalmih08.github.io/biographie">
+  <a href="index.html">
     <h1 class="nom">Pèse la panthère</h1>
   </a>
   <nav>
     <ul class="nav-ul">
-      <li><a href="jeux.html">Jouez maintenant</a></li>
+      <li><a href="#fake-ets">ETS</a></li>
+      <li><a href="#fake-gestion">Gestion</a></li>
+      <li><a href="#fake-croquis">Croquis</a></li>
+      <li><a href="#fake-organigramme">Organigramme</a></li>
+      <li><a href="#fake-testing">Testing</a></li>
+      <li><a href="#fake-entretient">Entretient</a></li>
+      <li><a href="#fake-video">Video</a></li>
+      <li class="jouez-btn"><a href="jeux.html">Jouez maintenant</a></li>
     </ul>
   </nav>
 
-<section class="debut">
+<section class="debut" id="debut">
 
   <div class="container">
 
@@ -31,45 +38,211 @@
 
     <div class="box box2">
       <h1>Notre jeu</h1>
-      <p>jbhgowrnbgiowrnweipfnqepw</p>
+      <p class="descriptionAp">Notre équipe a développé un jeu éducatif basées sur la matiere apprise tout au long d’un cours d’informatique de 11e année. Celle ci implique la stratégie ainsi que la coordination des yeux et de main. Tout en jouant à ce jeu, vous serez poser des questions à des moments prédéterminés pour assurer que vous devez répondre a des questions. Si la réponse est incorrecte, votre score sera remis à 0. Le but de notre jeu est d’atteindre un certain nombre de Pantheres basé sur la difficulté que vous avez choisi. Lorsque vous appuyez sur le bouton Jouer, votre temps commence. Vous devez cliquer sur la panthère aussi vite que vous pouvez lors de son déplacement autour de l’écran. Vous pouvez acheter des améliorations avec les panthères que vous avez obtenus. Pour obtenir cette amelioration, une question doit etre repondu correctment. Peu importe le résultat de la question, le prix de celle ci sera déduit de votre score. Une fois que vous atteignez l’objectif, votre temps apparaîtra à l’écran.</p>
     </div>
 
     <div class="box box3">
-      <p class="text">Pantheres: <span id="conteur"></span></p>
-      <img id="btn" src="images/patriotes.png" onclick="clicked()" width="250px" />
+      <h3>Essayez une plus petite version de notre jeu!</h3>
+      <p class="text notreJeu">Panthères: <span id="conteur"></span></p>
+      <br><img id="btn" src="images/patriotes.png" onclick="clicked()" width="250px" />
     </div>
 
   </div>
 
   </section>
 
+<div id="fake-ets"></div>
   <section class="ets-section">
-<h1>TITRE</h1>
+<h1 class="section-h1">Entrées, Traitement, Sorties </h1>
 <table>
 <tr>
-  <th>Entrees</th>
+  <th>Entrées</th>
+  <th>Traitement</th> 
   <th>Sorties</th>
-  <th>Traitement</th>
 </tr>
 <tr>
-  <td>12</td>
-  <td>2</td>
-  <td>3</td>
+  <td>Clique sur le bouton «Jouer»</td>
+  <td>Commence le chronomètre</td>
+  <td>Jeux commence</td>
 </tr>
 <tr>
-  <td>1</td>
-  <td>3</td>
-  <td>4</td>
+  <td>Clique sur la panthère</td>
+  <td>- Vérifie quelle améliorations ont été acheté <br>
+- Ajoute un nombre au panthères dépendant des améliorations
+</td>
+  <td>Affiche nouveau nombre de panthères</td>
+</tr>
+<tr>
+  <td>Clique ou achète une amélioration & Clique sur une réponse
+</td>
+  <td>- Trouve la question <br>
+- Vérifie la réponse <br>
+- Soustraction du nombre de panthères de l’achat
+</td>
+  <td>- Affiche si la réponse est bien <br> - Nombre de panthères ajouté par clic est augmenté <br>
+- Nombre de panthères affiche la soustraction
+</td>
+</tr>
+<tr>
+  <td>Dernier clique qui apporte le score au but de la difficulté</td>
+  <td>Calcule le temps pris</td>
+  <td>- Affiche le temps pris sur l’écran <br>
+- Ajouter le temps pris au table de temps
+</td>
+</tr>
+<tr>
+  <td>Clique sur bouton «TABLE DE TEMPS»</td>
+  <td>Cherche le div qui contient les temps</td>
+  <td>Affiche une table de temps avec tout les temps précédants accompagné d’un tiret avec la difficulté choisi</td>
+</tr>
+<tr>
+  <td>Clic sur une difficulté</td>
+  <td>- Vérifie quelle difficulté est choisi<br>- Le but devient le nombre dédié a la difficulté
+</td>
+  <td>- Affiche la difficulté <br>- 
+Affiche le but qui doit être atteint
+</td>
+</tr>
+<tr>
+  <td>Clic qui atteint le nombre de pantheres pour les questions obligatoires</td>
+  <td>- Vérifie si la réponse est bonne
+- Si oui, continue et le nombre de panthères reste le même
+- Si non, le nombre de pantheres recommence à 0.
+
+</td>
+  <td>- Si bien, affiche que c’est la bonne réponse <br>
+- Si non, affiche que c’est la mauvaise réponse et affiche le nombre de panthères à 0.
+
+</td>
 </tr>
 </table>
   </section>
 
+<div id="fake-gestion"></div>
   <section class="gestion">
-<h1>GESTION</h1>
+  <h1 class="section-h1">Gestion</h1>
+  <a href="images/gantt.pdf"><img class="gestion-img" src="images/gantt.jpg" alt="gestion"></a>
   </section>
 
+  <div id="fake-croquis"></div>
   <section class="croquis">
-<h1>CROQUIS</h1>
+<h1 class="section-h1">Croquis</h1>
+<div class="container">
+
+    <div class="box box1-croquis">
+      <img class="croquis-img" src="images/croquis1.jpg" alt="croquis">
+    </div>
+
+    <div class="box box2-croquis">
+      <img class="croquis-img" src="images/croquis2.jpg" alt="croquis">
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="box box3-croquis">
+      <img class="croquis-img croquis-img-3" src="images/croquis3.jpg" alt="croquis">
+    </div>
+  </div>
+  </section>
+
+  <div id="fake-organigramme"></div>
+  <section class="organigramme">
+<h1 class="section-h1">Organigramme/pseudo-code</h1>
+<img src="images/organigramme.png" alt="organigramme">
+<div class="pseudo-div"><a class="pseudo-a" href="pseudo.html">Clique pour accesser le site du pseudo-code</a></div>
+
+  </section>
+
+  <div id="fake-testing"></div>
+  <section class="testing">
+<h1 class="section-h1">Testing</h1>
+<table class="testing-table">
+<tr>
+  <th>Tests</th>
+  <th>Entrées</th>
+  <th>Resultats attendus</th>
+  <th>Resultats obtenus</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td>Cliquez sur le panthère</td>
+  <td>1.) Les panthères totale augmente par le montant de panthères par clique <br>
+2.) Le panthère change de place sur l’écran
+</td>
+  <td>1.) Les panthères totale augmente par le montant de panthères par clique <br>
+2.) Le panthère change de place sur l’écran
+</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td>Clique sur améliorations</td>
+  <td>1.) Soustrait le prix de la question de leur panthères (points) totales <br>
+2.) Affiche une question
+</td>
+  <td>1.) Soustrait le prix de la question de leur panthères (points) totales <br>
+2.) Affiche une question
+</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td>Clique sur bouton début</td>
+  <td>1.) Cache parties pas necessaires (table de temps, etc.) et affiche jeux. <br>
+2.) Commence la minuterie pour donner le temps à la fin
+</td>
+  <td>1.) Cache parties pas necessaires (table de temps, etc.) et affiche jeux. <br>
+2.) Commence la minuterie pour donner le temps à la fin
+</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td>Sélectionne difficulté</td>
+  <td>1.) Change le but qui doit être atteint selon difficulté choisi</td> <br>
+  <td>1.) Change le but qui doit être atteint selon difficulté choisi</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td>Répondre à une question</td>
+  <td>1.) S' ils répondent bien, ajoute un montant prédéterminé à leur points par clics.
+</td> <br>
+  <td>1.) S' ils répondent bien, ajoute un montant prédéterminé à leur points par clics.</td>
+</tr>
+</table>
+<p class="testing-p">Nous avons testé tous les aspects de notre programme. Par contre, nous allons plus en profondeur dans tout ce qui a à faire avec cliquer sur la panthère et répondre aux questions car ces deux choses son essentielles au bon fonctionnement de notre jeu. Ces choses permettent à l’utilisateur de progresser dans le jeu. De plus, nous avons aussi beaucoup vérifier les boutons du départ du jeu car ils font fonctionner la minuterie et le but qui doit être atteint qui fini par déterminer le score que chaque joueur obtient,une partie importante pour l’aspect compétitif d’un jeu. <br> <br>
+
+Suite à nos tests, aucun changement doit être fait car toutes les entrées donnent les résultats qui sont attendues.
+</p>
+  </section>
+
+  <div id="fake-entretient"></div>
+  <section class="entretient">
+  <h1 class="section-h1">Entretient</h1>
+  <p class="entretient-p">Pour ce logiciel il y a quelques changements dans l'entretien qui peuvent être faites pour améliorer et rendre notre jeu plus à date dans le futur. Premièrement, on pourrait changer le thème selon la saison présente pour ajouter une nouvelle apparence. De plus, avoir une plus grande diversité dans les questions ou même avoir plusieurs versions du jeu avec des questions sur diverses matières pourrait ouvrir notre jeux a des plus grandes audiences. Finalement, il pourrait avoir besoin de l'entretien à cause de mise à jour des applications ou des systèmes de navigation qui ont été utilisés pour créer et faire fonctionner le logiciel.
+</p>
+  </section>
+
+  <div id="fake-video"></div>
+  <section class="video">
+  <h1 class="section-h1">Video</h1>
+  <video controls playsinline loop id="myVid"> -->
+  <source src="images/video.mp4" type="video/mp4">
+  </section>
+
+  <section class="bas">
+    <div class="footer">
+      
+
+    <a href="#debut"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="footer-arrow"> <!-- Code pour la fleche pour retourner en haut -->
+        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clip-rule="evenodd" />
+      </svg></a>
+
+    <footer>
+      <a class="footer-a" href="jeux.html">Jouez</a>
+      <a class="footer-a" href="index.html">Accueil</a>
+      <a class="footer-a" href="mailto:jalmih08@ecolecatholique.com?subject=Information a propos de Pese La Panthère">Contact</a>
+      <p class="footer-p">© Copyright Les Panthères 2021</p>
+    </footer>
+  </div>
   </section>
 
   <script>
